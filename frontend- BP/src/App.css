@@ -447,6 +447,230 @@
 }
 
 /* =========================
+   PANTALLA PREMIO
+========================= */
+
+.prize-page {
+  min-height: 100vh;
+  width: min(900px, 92%);
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 70px 20px 140px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.prize-heading {
+  color: var(--pink);
+
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  font-weight: 900;
+
+  line-height: 1;
+
+  margin-bottom: 30px;
+
+  animation: textEnter 0.8s ease both;
+}
+
+.prize-subtitle {
+  color: var(--text);
+
+  font-size: 1.8rem;
+
+  margin-bottom: 25px;
+}
+
+/* =========================
+   FONDO DECORADO PREMIO
+========================= */
+
+.prize-flower,
+.prize-petal {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.prize-flower {
+  animation: flowerFloat 5s ease-in-out infinite;
+}
+
+.prize-flower-1 {
+  top: 5%;
+  left: 5%;
+  font-size: 7rem;
+  opacity: 0.35;
+}
+
+.prize-flower-2 {
+  top: 7%;
+  right: 6%;
+  font-size: 6rem;
+  opacity: 0.28;
+  animation-delay: 1s;
+}
+
+.prize-flower-3 {
+  bottom: 6%;
+  left: 4%;
+  font-size: 7rem;
+  opacity: 0.38;
+  animation-delay: 0.5s;
+}
+
+.prize-flower-4 {
+  bottom: 7%;
+  right: 5%;
+  font-size: 7rem;
+  opacity: 0.35;
+  animation-delay: 1.5s;
+}
+
+.prize-petal {
+  font-size: 2.4rem;
+  opacity: 0.22;
+  animation: fallingPetal 8s ease-in-out infinite;
+}
+
+.prize-petal-1 {
+  top: 36%;
+  left: 12%;
+}
+
+.prize-petal-2 {
+  top: 42%;
+  right: 12%;
+  animation-delay: 2s;
+}
+
+.prize-petal-3 {
+  top: 62%;
+  right: 7%;
+  animation-delay: 4s;
+}
+
+.prize-bottom-wave {
+  position: absolute;
+
+  left: -5%;
+  bottom: -100px;
+
+  width: 110%;
+  height: 220px;
+
+  background: linear-gradient(
+    90deg,
+    #ffb8c2,
+    #ff8fa3,
+    #ffb8c2
+  );
+
+  border-radius: 50% 50% 0 0 / 70% 70% 0 0;
+
+  opacity: 0.8;
+
+  z-index: 1;
+}
+
+.prize-page {
+  position: relative;
+  z-index: 2;
+}
+
+/* TARJETA DEL PREMIO */
+
+.prize-card {
+  width: min(680px, 100%);
+
+  position: relative;
+
+  padding: 35px 35px 30px;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  border: 3px solid #ffc9d1;
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 15px 40px rgba(230, 90, 120, 0.10);
+
+  margin-bottom: 35px;
+}
+
+.prize-card h2 {
+  color: var(--pink);
+
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-weight: 900;
+
+  line-height: 1;
+
+  margin-bottom: 18px;
+}
+
+.prize-card p {
+  color: var(--text);
+
+  font-size: 1.6rem;
+  line-height: 1.45;
+}
+
+
+/* BRILLITOS */
+
+.sparkle {
+  position: absolute;
+
+  color: #f6b575;
+
+  font-size: 2.4rem;
+
+  animation: floating 3s ease-in-out infinite;
+}
+
+.sparkle-left {
+  left: 25px;
+  top: 25px;
+}
+
+.sparkle-right {
+  right: 25px;
+  top: 25px;
+
+  animation-delay: 1s;
+}
+
+
+/* TEXTO DE ABAJO */
+
+.prize-info {
+  color: var(--text);
+
+  font-size: 1.55rem;
+  line-height: 1.55;
+
+  margin-bottom: 35px;
+}
+
+
+/* BOTÓN */
+
+.prize-button {
+  max-width: 600px;
+}
+
+/* =========================
    TABLET
 ========================= */
 
@@ -591,6 +815,49 @@
 
   z-index: 0;
 }
+  .prize-page {
+    width: 100%;
+
+    padding:
+      50px
+      20px
+      110px;
+  }
+
+  .prize-heading {
+    font-size: 3rem;
+
+    margin-bottom: 22px;
+  }
+
+  .prize-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .prize-card {
+    padding:
+      28px
+      20px
+      25px;
+
+    border-radius: 24px;
+  }
+
+  .prize-card h2 {
+    font-size: 3.4rem;
+  }
+
+  .prize-card p {
+    font-size: 1.1rem;
+  }
+
+  .prize-info {
+    font-size: 1rem;
+  }
+
+  .sparkle {
+    font-size: 1.7rem;
+  }
 }
 
 
